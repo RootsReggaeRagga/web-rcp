@@ -3,6 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
+                    <Camera/>
                     <!--<HelloWorld msg="Welcome to Your Vue.js App"/>-->
                 </div>
                 <div class="col-md-6">
@@ -17,6 +18,7 @@
     // @ is an alias to /src
     import HelloWorld from '@/components/HelloWorld.vue';
     import Timer from '@/components/Timer.vue';
+    import Camera from '@/components/camera.vue';
     import BootstrapVue from 'bootstrap-vue';
     import 'bootstrap/dist/css/bootstrap.css';
     import 'bootstrap-vue/dist/bootstrap-vue.css';
@@ -24,7 +26,7 @@
     export default {
         name: 'home',
         components: {
-            HelloWorld, Timer
+            HelloWorld, Timer, Camera
         }
     }
 </script>
