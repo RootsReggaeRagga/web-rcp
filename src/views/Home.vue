@@ -16,9 +16,9 @@
 
 <script>
     // @ is an alias to /src
-    import HelloWorld from '@/components/HelloWorld.vue';
+
     import Timer from '@/components/Timer.vue';
-    import Camera from '@/components/camera.vue';
+    import Camera from '@/components/Camera.vue';
     import BootstrapVue from 'bootstrap-vue';
     import 'bootstrap/dist/css/bootstrap.css';
     import 'bootstrap-vue/dist/bootstrap-vue.css';
@@ -26,7 +26,7 @@
     export default {
         name: 'home',
         components: {
-            HelloWorld, Timer, Camera
+            Timer, Camera
         }
     }
 </script>
