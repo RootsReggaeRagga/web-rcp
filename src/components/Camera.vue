@@ -1,7 +1,7 @@
 <template>
     <div id="Camera">
         <div>
-            <video ref="video" :width="width"
+            <video id="video" :width="width"
                    :height="height"
                    :autoplay="autoplay"
                    :playsinline="playsinline"></video>
@@ -62,10 +62,10 @@
             }
         },
         mounted() {
-            this.video = this.$refs.video;
+            this.video = this.$id.video;
             if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
                 navigator.mediaDevices.getUserMedia({video: true}).then(stream => {
-                    this.video.src = window.HTMLMediaElement.srcObject = stream;
+                    this.video.src = window.URL.createObjectURL(stream);
 
                 });
             }
@@ -81,6 +81,9 @@
 </script>
 <style>
 
+    #video {
+        background-color: #000000;
+    }
 
     #canvas {
         display: none;
