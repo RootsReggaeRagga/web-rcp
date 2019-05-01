@@ -1,7 +1,7 @@
 <template>
     <div class="home">
-        <div class="container">
-            <div class="row">
+        <div class="container-fluid">
+            <div class="row d-md-flex align-content-center align-items-center justify-content-center">
                 <div class="col-md-6">
                     <Camera/>
                     <!--<HelloWorld msg="Welcome to Your Vue.js App"/>-->

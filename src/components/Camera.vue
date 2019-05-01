@@ -1,50 +1,20 @@
 <template>
-   <video ref="video" id="video" width="640" height="480" autoplay></video>
-    <!--<button id="snap" v-on:click="capture()">Snap Photo</button>
-    <canvas ref="canvas" id="canvas" width="640" height="480"></canvas>
-    <ul>
-        <li v-for="c in captures">
+   <div id="Camera">
+      <div><video ref="video" id="video" width="640" height="480" autoplay></video></div>
+      <div><button id="snap" v-on:click="capture()">Snap Photo</button></div>
+      <canvas ref="canvas" id="canvas" width="640" height="480"></canvas>
+      <ul>
+         <li v-for="c in captures">
             <img v-bind:src="c" height="50" />
-        </li>
-    </ul>-->
+         </li>
+      </ul>
+   </div>
 </template>
 
 <script>
     export default {
         name: 'Camera',
-        /*props: {
-            width: {
-                type: [Number, String],
-                default: "100%"
-            },
-            height: {
-                type: [Number, String],
-                default: 500
-            },
-            autoplay: {
-                type: Boolean,
-                default: true
-            },
-            screenshotFormat: {
-                type: String,
-                default: "image/jpeg"
-            },
-            deviceId: {
-                type: String,
-                default: null
-            },
-            playsinline: {
-                type: Boolean,
-                default: true
-            },
-            resolution: {
-                type: Object,
-                default: null,
-                validator: value => {
-                    return value.height && value.width;
-                }
-            }
-        },*/
+
         data() {
             return {
                 video: {},
@@ -71,14 +41,7 @@
     }
 </script>
 <style>
-    body{
-        background-color: #F0F0F0;
-    }
-    #app {
-        text-align: center;
-        color: #2c3e50;
-        margin-top: 60px;
-    }
+
     #video {
         background-color: #000000;
     }
