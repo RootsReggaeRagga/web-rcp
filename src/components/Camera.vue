@@ -42,7 +42,7 @@
             },
             poster:{
                 type: String,
-                default: "../public/poster.png"
+                default: "poster.png"
             },
             playsinline: {
                 type: Boolean,
