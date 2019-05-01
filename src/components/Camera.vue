@@ -1,7 +1,7 @@
 <template>
     <div id="Camera">
         <div>
-            <video ref="video" id="video" :width="width"
+            <video ref="video" :width="width"
                    :height="height"
                    :autoplay="autoplay"
                    :playsinline="playsinline"></video>
@@ -66,7 +66,7 @@
             if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
                 navigator.mediaDevices.getUserMedia({video: true}).then(stream => {
                     this.video.src = window.HTMLMediaElement.srcObject = stream;
-                    this.video.play();
+
                 });
             }
         },
@@ -81,9 +81,6 @@
 </script>
 <style>
 
-    #video {
-        background-color: #000000;
-    }
 
     #canvas {
         display: none;
