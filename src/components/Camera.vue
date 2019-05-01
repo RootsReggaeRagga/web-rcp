@@ -3,6 +3,7 @@
         <div>
             <video ref="video" id="video" :width="width"
                    :height="height"
+                   :poster="poster"
                    :autoplay="autoplay"
                    :playsinline="playsinline"></video>
         </div>
@@ -37,11 +38,11 @@
             },
             screenshotFormat: {
                 type: String,
-                default: "image/jpeg"
+                default: "image/webp"
             },
-            deviceId: {
+            poster:{
                 type: String,
-                default: null
+                default: "../public/poster.png"
             },
             playsinline: {
                 type: Boolean,
@@ -75,7 +76,7 @@
             capture() {
                 this.canvas = this.$refs.canvas;
                 var context = this.canvas.getContext("2d").drawImage(this.video, 0, 0, 640, 480);
-                this.captures.push(canvas.toDataURL("image/png"));
+                this.captures.push(canvas.toDataURL("image/webp"));
             },
             startCamera(){
                 this.video.play()
