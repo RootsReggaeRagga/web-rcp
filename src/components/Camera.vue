@@ -32,7 +32,7 @@
             },
             autoplay: {
                 type: Boolean,
-                default: true
+                default: false
             },
             screenshotFormat: {
                 type: String,
@@ -74,7 +74,7 @@
             capture() {
                 this.canvas = this.$refs.canvas;
                 var context = this.canvas.getContext("2d").drawImage(this.video, 0, 0, this.width, this.height);
-                this.captures.push(canvas.toDataURL("image/png"));
+                this.captures.push(context.toDataURL(this.screenshotFormat));
             }
         }
     }
