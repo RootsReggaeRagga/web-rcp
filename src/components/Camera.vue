@@ -65,8 +65,8 @@
             this.video = this.$refs.video;
             if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
                 navigator.mediaDevices.getUserMedia({video: true}).then(stream => {
-                    this.video.src = window.URL.createObjectURL(stream);
-                    this.video.play();
+                    this.video.src = window.HTMLMediaElement.srcObject = stream;
+                    //this.video.play();
                 });
             }
         },
@@ -74,7 +74,7 @@
             capture() {
                 this.canvas = this.$refs.canvas;
                 var context = this.canvas.getContext("2d").drawImage(this.video, 0, 0, this.width, this.height);
-                this.captures.push(canvas.toDataURL("image/png"));
+                this.captures.push(canvas.toDataURL("image/webp"));
             }
         }
     }
