@@ -80,6 +80,7 @@
                 this.video.stop();
             },
             startCamera(){
+                //TODO if no media then modal no source found, fade out poster or smth
                 this.video.play()
             }
         }
