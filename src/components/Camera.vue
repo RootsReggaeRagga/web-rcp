@@ -91,11 +91,14 @@
     }
 
     #canvas {
-        //display: none;
+        display: none;
     }
-
+    ul{
+        height:60px;
+    }
     li {
         display: inline;
         padding: 5px;
+        margin-bottom:10px;
     }
 </style>
