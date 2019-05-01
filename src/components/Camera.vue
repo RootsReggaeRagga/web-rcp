@@ -65,7 +65,7 @@
             this.video = this.$refs.video;
             if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
                 navigator.mediaDevices.getUserMedia({video: true}).then(stream => {
-                    this.source = window.HTMLMediaElement.srcObject = stream;
+                    this.video.src = window.HTMLMediaElement.srcObject = stream;
                     //this.video.play();
                 });
             }
