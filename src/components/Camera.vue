@@ -76,7 +76,7 @@
                 this.canvas = this.$refs.canvas;
                 var context = this.canvas.getContext("2d").drawImage(this.video, 0, 0, 640, 480);
                 this.captures.push(canvas.toDataURL("image/png"));
-            }
+            },
             startCamera(){
                 this.video.play()
             }
