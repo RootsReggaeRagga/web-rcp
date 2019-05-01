@@ -7,6 +7,7 @@
                    :playsinline="playsinline"></video>
         </div>
         <div>
+            <button class="btn btn-primary btn-rounded" id="start" v-on:click="startCamera()">Rozpocznij</button>
             <button class="btn btn-danger btn-rounded" id="snap" v-on:click="capture()">Selfiaczek pyk!</button>
         </div>
         <canvas ref="canvas" id="canvas" width="640" height="480"></canvas>
@@ -74,7 +75,10 @@
             capture() {
                 this.canvas = this.$refs.canvas;
                 var context = this.canvas.getContext("2d").drawImage(this.video, 0, 0, this.width, this.height);
-                this.captures.push(context.toDataURL(this.screenshotFormat));
+                this.captures.push(canvas.toDataURL(this.screenshotFormat));
+            },
+            startCamera(){
+                this.video.play()
             }
         }
     }
@@ -86,7 +90,7 @@
     }
 
     #canvas {
-        display: none;
+        //display: none;
     }
 
     li {
