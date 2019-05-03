@@ -27,7 +27,9 @@
         name: 'home',
         components: {
             Timer, Camera
-        }
+        },
+
+
     }
 </script>
 <style scoped lang="scss">
