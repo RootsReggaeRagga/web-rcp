@@ -17,24 +17,37 @@
         name: 'RequestAPI',
         methods: {
             requestAPI() {
-                axios.post('https://admin.workguard.app/api/v1/devices?', {
-                    body: {
-                        'email': 'bartlomiej.grela@gmail.com',
-                        'password': 'bartek72',
-                        'serial': '123456789',
-                        'api-key': '1234qwer',
-                        'device-name': 'bartek device'
+                const formData = new FormData();
+                formData.append('email', 'bartlomiej.grela@agencja71.pl');
+                formData.append('password', 'bartek72');
+                formData.append('serial', 'bartlomiej.grela@agencja71.pl');
+                formData.append('device-name', 'bartlomiej.grela@agencja71.pl');
+                formData.append('api-key', 'bartlomiej.grela@agencja71.pl');
+                //formData.append('_password', password);
+
+                axios
+                    .post('https://test.workguard.app/api/v1/devices', formData)
+                    .then(response => {
+                        console.log(response.data);
+                    })
+               /* axios.get('https://test.workguard.app/api/v1/test', {
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    params: {
+                        'value': '1234'
+
                     }
                 })
                     .then(function (response) {
-                        console.log(response);
+                        console.log(response.data);
                     })
                     .catch(function (error) {
                         console.log(error);
                     })
                     .then(function () {
                         // always executed
-                    });
+                    });*/
             }
         },
         mounted() {
